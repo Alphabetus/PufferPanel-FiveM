@@ -1,0 +1,41 @@
+{
+  "pufferd": {
+    "type": "FiveM",
+    "display": "Grand Theft Auto - FiveM",
+    "install": {
+      "commands": [
+        {
+          "target": "mods",
+          "type": "mkdir"
+        }
+      ]
+    },
+	"run": {
+		"stop": "exit",
+		"pre": [],
+		"post": [],
+		"arguments": [
+		],
+		"program": "sh"
+	},
+    "environment": {
+      "type": "standard"
+    },
+    "data": {
+      "ip": {
+        "value": "0.0.0.0",
+        "required": true,
+        "desc": "What IP to bind the server to",
+        "display": "IP",
+        "internal": false
+      },
+      "port": {
+        "value": "25565",
+        "required": true,
+        "desc": "What port to bind the server to",
+        "display": "Port",
+        "internal": false
+      }
+    }
+  }
+}
