@@ -4,10 +4,25 @@
     "display": "Grand Theft Auto - FiveM",
     "install": {
       "commands": [
+		{
+			"files": "https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/638-c36234473789b1af366b5fdc80a07f87c2755ddb/fx.tar.xz",
+			"type": "download"
+		},
+		{
+			"target": "core",
+			"type": "mkdir"
+		},
+		{
+			"commands":
+			[
+				"tar --no-same-owner -xzvf fx.tar.xz"
+			],
+			"type": "command"
+		},
         {
-          "target": "mods",
+          "target": "resources",
           "type": "mkdir"
-        }
+        },
       ]
     },
 	"run": {
@@ -30,10 +45,38 @@
         "internal": false
       },
       "port": {
-        "value": "25565",
+        "value": "30120",
         "required": true,
         "desc": "What port to bind the server to",
         "display": "Port",
+        "internal": false
+      },
+      "licensekey": {
+        "value": "",
+        "required": true,
+        "desc": "You need a license key for your server (https://keymaster.fivem.net)",
+        "display": "License Key",
+        "internal": false
+      },
+      "maxclients": {
+        "value": "1",
+        "required": false,
+        "desc": "How many clients you would like to limit in your server? (32 max)",
+        "display": "Max Players",
+        "internal": false
+      },
+      "allowscripts": {
+        "value": "1",
+        "required": false,
+        "desc": "Should Clients be able to run custom Client-Sides Scripts?",
+        "display": "Allow Client-Side Scripts",
+        "internal": false
+      },
+      "tags": {
+        "value": "",
+        "required": false,
+        "desc": "What tags would you like to categorize your server.",
+        "display": "Server tags",
         "internal": false
       }
     }
