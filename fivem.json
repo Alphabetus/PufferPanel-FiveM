@@ -43,7 +43,7 @@
 		"arguments": [
 			"+exec serverconfiguration.cfg"
 		],
-		"program": "./core/"
+		"program": "./core/run.sh"
 	},
     "environment": {
       "type": "standard"
