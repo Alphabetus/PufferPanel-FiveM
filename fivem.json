@@ -5,7 +5,7 @@
     "install": {
       "commands": [
 		{
-			"files": "https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/638-c36234473789b1af366b5fdc80a07f87c2755ddb/fx.tar.xz",
+			"files": "https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/${gameversion}/fx.tar.xz",
 			"type": "download"
 		},
 		{
@@ -20,7 +20,9 @@
 			"commands":
 			[
 				"unxz fx.tar.xz fx.tar",
-				"tar --no-same-owner -xf fx.tar -C core"
+				"tar --no-same-owner -xf fx.tar -C core",
+				"chmod u+x core/run.sh",
+				"git clone https://github.com/citizenfx/cfx-server-data.git resources"
 			],
 			"type": "command"
 		},
@@ -43,7 +45,7 @@
 		"arguments": [
 			"+exec serverconfiguration.cfg"
 		],
-		"program": "./core/run.sh"
+		"program": "core/run.sh"
 	},
     "environment": {
       "type": "standard"
@@ -61,6 +63,13 @@
         "required": true,
         "desc": "What port to bind the server to",
         "display": "Port",
+        "internal": false
+      },
+      "gameversion": {
+        "value": "638-c36234473789b1af366b5fdc80a07f87c2755ddb",
+        "required": true,
+        "desc": "What game version would you like it to install? (<a href=\"https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/\">Version List</a>)",
+        "display": "Game Version",
         "internal": false
       },
       "licensekey": {
