@@ -65,7 +65,7 @@
       "licensekey": {
         "value": "",
         "required": true,
-        "desc": "You need a license key for your server (https://keymaster.fivem.net)",
+        "desc": "You need a license key for your server (<a href=\"https://keymaster.fivem.net\">https://keymaster.fivem.net</a>)",
         "display": "License Key",
         "internal": false
       },
@@ -103,7 +103,7 @@
         "desc": "This should keep the player's IP Addresses a bit more secure/hidden.",
         "display": "Hide Endpoint IP Addresses",
         "internal": false
-      }
+      },
       "servericon": {
         "value": "",
         "required": false,
