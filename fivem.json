@@ -19,7 +19,7 @@
 		{
 			"commands":
 			[
-				"tar -cJf fx.tar.xz ./core",
+				"tar -cJf fx.tar.xz ./core"
 			],
 			"type": "command"
 		},
