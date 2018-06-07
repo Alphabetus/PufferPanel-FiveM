@@ -19,7 +19,8 @@
 		{
 			"commands":
 			[
-				"tar -cJf fx.tar.xz ./core"
+				"unxz fx.tar.xz fx.tar",
+				"tar --no-same-owner -xf fx.tar -C core"
 			],
 			"type": "command"
 		},
