@@ -15,7 +15,7 @@
             "steamcmd/steamcmd.sh +login ${steam_user} ${steam_password} +force_install_dir ${rootdir} +app_update 233780 +quit",
             "mkdir -p .steam/sdk32",
             "cp steamcmd/linux32/steamclient.so .steam/sdk32/steamclient.so",
-	          "touch ./config.cfg"
+	          "touch ./config_server.cfg"
           ],
           "type": "command"
         }
@@ -51,7 +51,8 @@
 		"required": true,
         "desc": "Password for Steam login",
         "display": "Steam Password",
-        "internal": false
+        "internal": false,
+		"type": "password"
       },
       "ip": {
         "value": "0.0.0.0",

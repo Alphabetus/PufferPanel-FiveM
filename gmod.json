@@ -1,0 +1,115 @@
+{
+  "pufferd": {
+    "type": "srcds",
+    "display": "Garry's Mod",
+    "install": {
+      "commands": [
+        {
+          "files": "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz",
+          "type": "download"
+        },
+        {
+          "target": "steamcmd",
+          "type": "mkdir"
+        },
+        {
+          "target": "css_game",
+          "type": "mkdir"
+        },
+        {
+          "commands": [
+            "tar --no-same-owner -xzvf steamcmd_linux.tar.gz -C steamcmd",
+            "steamcmd/steamcmd.sh +login anonymous +force_install_dir ${rootdir}/css_game +app_update 232330 +quit",
+            "steamcmd/steamcmd.sh +login anonymous +force_install_dir ${rootdir} +app_update 4020 +quit",
+            "mkdir -p .steam/sdk32",
+            "cp steamcmd/linux32/steamclient.so .steam/sdk32/steamclient.so"
+          ],
+          "type": "command"
+        },
+		{
+          "type": "writefile",
+          "text": "//\n 			// Use this file to mount additional paths to the filesystem\n 			// DO NOT add a slash to the end of the filename\n 			//\n  			\"mountcfg\"\n 			{\n 				\"cstrike\"	\"./css_game/cstrike\"\n 				//\"tf\"			\"C:\mytf2server\tf\"\n 			}\n",
+          "target": "garrysmod/cfg/mount.cfg"
+        }
+      ]
+    },
+    "run": {
+      "stop": "exit",
+      "pre": [],
+      "post": [],
+      "arguments": [
+		"+gamemode",
+		"${gamemode}",
+		"+hostname",
+		"${hostname}",
+        "+ip",
+        "${ip}",
+        "+port",
+        "${port}",
+        "-game",
+        "garrysmod",
+        "-console",
+        "+map",
+        "${map}",
+        "+maxplayers",
+        "${maxplayers}",
+        "-norestart"
+      ],
+      "program": "./srcds_run"
+    },
+    "environment": {
+      "type": "tty"
+    },
+    "data": {
+      "hostname": {
+        "value": "PufferPanel New GMod Server",
+        "required": true,
+        "desc": "What would you like the host name should be?",
+        "display": "Host Name",
+        "internal": false
+      },
+      "gamemode": {
+        "value": "sandbox",
+        "required": true,
+        "desc": "What gamemode would you like to load first?",
+        "display": "Gamemode",
+        "internal": false
+      },
+      "map": {
+        "value": "gm_construct",
+        "required": true,
+        "desc": "Map to load by default",
+        "display": "Map",
+        "internal": false
+      },
+      "maxplayers": {
+        "value": "8",
+		"required": true,
+        "desc": "Max players allowed on server",
+        "display": "Max Players",
+        "internal": false,
+        "type": "integer"
+      },
+      "ip": {
+        "value": "0.0.0.0",
+        "required": true,
+        "desc": "What IP to bind the server to",
+        "display": "IP",
+        "internal": false
+      },
+      "port": {
+        "value": "27015",
+        "required": true,
+        "desc": "What port to bind the server to",
+        "display": "Port",
+        "internal": false,
+        "type": "integer"
+      }
+    }
+  }
+}
+
+
+
+
+
