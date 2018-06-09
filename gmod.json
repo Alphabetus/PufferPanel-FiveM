@@ -25,11 +25,6 @@
             "cp steamcmd/linux32/steamclient.so .steam/sdk32/steamclient.so"
           ],
           "type": "command"
-        },
-		    {
-          "type": "writefile",
-          "text": "\"mountcfg\" 			{ 				\"cstrike\"	\"./css_game/cstrike\"				}",
-          "target": "garrysmod/cfg/mount.cfg"
         }
       ]
     },
