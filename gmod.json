@@ -28,7 +28,7 @@
         },
 		{
           "type": "writefile",
-          "text": "//\n 			// Use this file to mount additional paths to the filesystem\n 			// DO NOT add a slash to the end of the filename\n 			//\n  			\"mountcfg\"\n 			{\n 				\"cstrike\"	\"./css_game/cstrike\"\n 				//\"tf\"			\"C:\\mytf2server\\tf\"\n 			}\n",
+          "text": "\"mountcfg\"\n 			{\n 				\"cstrike\"	\"./css_game/cstrike\"\n				}\n",
           "target": "garrysmod/cfg/mount.cfg"
         }
       ]
