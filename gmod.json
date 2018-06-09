@@ -25,6 +25,11 @@
             "cp steamcmd/linux32/steamclient.so .steam/sdk32/steamclient.so"
           ],
           "type": "command"
+        },
+		{
+          "type": "writefile",
+          "text": "//\n // Use this file to mount additional paths to the filesystem\n // DO NOT add a slash to the end of the filename\n //\n  \"mountcfg\"\n {\n 	\"cstrike\"	\"${rootdir}\\css_game\\cstrick\"\n 	// \"tf\"			\"\"\n }\n   ",
+          "target": "/garrysmod/cfg/mount.cfg"
         }
       ]
     },
