@@ -26,9 +26,9 @@
           ],
           "type": "command"
         },
-		{
+		    {
           "type": "writefile",
-          "text": "\"mountcfg\"\n 			{\n 				\"cstrike\"	\"./css_game/cstrike\"\n				}\n",
+          "text": "\"mountcfg\" 			{ 				\"cstrike\"	\"./css_game/cstrike\"				}",
           "target": "garrysmod/cfg/mount.cfg"
         }
       ]
@@ -108,7 +108,3 @@
     }
   }
 }
-
-
-
-
