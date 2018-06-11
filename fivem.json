@@ -13,12 +13,16 @@
 			"type": "mkdir"
 		},
 		{
+			"target": "core/resources",
+			"type": "mkdir"
+		},
+		{
 			"commands":
 			[
 				"unxz fx.tar.xz fx.tar",
 				"tar --no-same-owner -xf fx.tar -C core",
 				"chmod u+x core/run.sh",
-				"git clone https://github.com/citizenfx/cfx-server-data.git core"
+				"git clone https://github.com/citizenfx/cfx-server-data.git core/resources"
 			],
 			"type": "command"
 		},
