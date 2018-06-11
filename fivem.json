@@ -48,7 +48,7 @@
 		"program": "core/run.sh"
 	},
     "environment": {
-      "type": "standard"
+      "type": "tty"
     },
     "data": {
       "ip": {
