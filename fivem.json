@@ -1,7 +1,7 @@
 {
   "pufferd": {
     "type": "FiveM",
-    "display": "Grand Theft Auto - FiveM [Broken | WIP]",
+    "display": "Grand Theft Auto - FiveM [WIP]",
     "install": {
       "commands": [
 		{
@@ -45,7 +45,7 @@
 		"arguments": [
 			"+exec serverconfiguration.cfg"
 		],
-		"program": "core/run.sh"
+		"program": "sh core/run.sh"
 	},
     "environment": {
       "type": "tty"
