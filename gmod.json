@@ -28,8 +28,8 @@
         },
 		{
           "type": "writefile",
-          "text": "//\n // Use this file to mount additional paths to the filesystem\n // DO NOT add a slash to the end of the filename\n //\n  \"mountcfg\"\n {\n 	\"cstrike\"	\"${rootdir}\\css_game\\cstrike\"\n 	// \"tf\"			\"\"\n }\n   ",
-          "target": "/garrysmod/cfg/mount.cfg"
+          "text": "\"mountcfg\" { \"cstrike\" \"${rootdir}\\css_game\\cstrike\" }",
+          "target": "${rootdir}/garrysmod/cfg/mount.cfg"
         }
       ]
     },
@@ -38,21 +38,17 @@
       "pre": [],
       "post": [],
       "arguments": [
-		"+gamemode",
-		"${gamemode}",
-		"+hostname",
-		"${hostname}",
+        "+hostname",
+        "${hostname}",
         "+ip",
         "${ip}",
         "+port",
         "${port}",
+        "+maxplayers",
+        "${maxplayers}",
         "-game",
         "garrysmod",
         "-console",
-        "+map",
-        "${map}",
-        "+maxplayers",
-        "${maxplayers}",
         "-norestart"
       ],
       "program": "./srcds_run"
@@ -66,20 +62,6 @@
         "required": true,
         "desc": "What would you like the host name should be?",
         "display": "Host Name",
-        "internal": false
-      },
-      "gamemode": {
-        "value": "sandbox",
-        "required": true,
-        "desc": "What gamemode would you like to load first?",
-        "display": "Gamemode",
-        "internal": false
-      },
-      "map": {
-        "value": "gm_construct",
-        "required": true,
-        "desc": "Map to load by default",
-        "display": "Map",
         "internal": false
       },
       "maxplayers": {
