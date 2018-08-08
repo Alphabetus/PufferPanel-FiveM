@@ -29,7 +29,7 @@
 		{
           "type": "writefile",
           "text": "\"mountcfg\" { \"cstrike\" \"${rootdir}\\css_game\\cstrike\" }",
-          "target": "${rootdir}/garrysmod/cfg/mount.cfg"
+          "target": "/garrysmod/cfg/mount.cfg"
         }
       ]
     },
