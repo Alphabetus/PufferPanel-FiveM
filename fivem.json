@@ -66,7 +66,7 @@
         "internal": false
       },
       "gameversion": {
-        "value": "2893-4610d9229c1c5f526870ca6738e5c53004e15b32",
+        "value": "3405-acb2298e6559f8548513e9a23d8ea2081a76f65c/",
         "required": true,
         "desc": "What game version would you like it to install? (<a href=\"https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/\">Version List</a>)",
         "display": "Game Version",
@@ -109,7 +109,7 @@
         "internal": false
       },
       "servername": {
-        "value": "New PufferdPanel FiveM-Server",
+        "value": "FiveM - Hosted by https://lowcost-servers.com",
         "required": false,
         "desc": "What would you like to display to the server list",
         "display": "Server Host Name",
